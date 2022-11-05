@@ -12,7 +12,7 @@ const pathToTxtFile = path.resolve(__dirname,'text.txt')
 let writeableStream = fs.createWriteStream(pathToTxtFile);
 
 function sendExitMessage () {
-  console.log('Goodbye')
+  console.log(`\nGoodbye`)
   rl.close()
 }
 const greetingPhrase = 'Hello!\nEnter your message:\n'
