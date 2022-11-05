@@ -6,7 +6,7 @@ const pathToStyles = path.resolve(__dirname,'styles')
 const pathToBundle = path.resolve(__dirname,'project-dist','bundle.css')
 
 
-const mergeStyles = async function () {
+const mergeStyles = async function (pathToStyles,pathToBundle) {
   try{
     const styleFiles = await fsPromise.readdir(pathToStyles,{withFileTypes:true})
     const bundle = fs.createWriteStream(pathToBundle);
@@ -29,4 +29,4 @@ const mergeStyles = async function () {
   }
 }
 
-mergeStyles()
+mergeStyles(pathToStyles,pathToBundle)
